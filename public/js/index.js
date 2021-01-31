@@ -11,7 +11,7 @@ weatherForm.addEventListener('submit',(e)=>{
 
         response.json().then((data) => {
             if (data.error){
-                ms1.setAttribute("color","red")
+
                 ms1.textContent=data.error;
                 ms2.textContent= '';
                 console.log(data.error)
