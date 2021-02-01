@@ -29,8 +29,8 @@ app.get("", (req, res)=>{
 })
 
  app.get("/help", (req , res)=>{
-     res.render("Help",{
-         helpMassege:"this a help message",
+     res.render("help",{
+         helpMassege:"this web app was developed using node.js ",
          title: "help",
 
          name: "jerry"
