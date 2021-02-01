@@ -55,7 +55,7 @@ app.get("", (req, res)=>{
 
              }else{
                  forecast(x1, x2, (error2 , data2)=>{
-                     if (error){
+                     if (error2){
                          res.send({error : error2})
                      }else{
                          console.log(location)
