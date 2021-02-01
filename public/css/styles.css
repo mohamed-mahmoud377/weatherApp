@@ -46,3 +46,7 @@ button{
     padding: 8px;
 
 }
+.WImg{
+    display: none;
+    width: 100px;
+}

@@ -15,9 +15,9 @@ request({url : url2 , json : true}, (error , data)=>{
 
         }else{
         const weatherInfo = data.body;
-        console.log(data.body)
-        callback(undefined,`the current weather is ${weatherInfo.current.temperature} but is feels like ${weatherInfo.current.feelslike}`)
-        // callback(undefined,body)
+        // console.log(data.body)
+        // callback(undefined,`the current weather is ${weatherInfo.current.temperature} but is feels like ${weatherInfo.current.feelslike}`)
+        callback(undefined,weatherInfo)
 
     }
 })

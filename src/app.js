@@ -22,14 +22,14 @@ app.use(express.static(publicDir))
 
 app.get("", (req, res)=>{
     res.render("index",{
-        title: "weather ",
+        title: "Weather ",
         name : "jerry"
     })
 
 })
 
  app.get("/help", (req , res)=>{
-     res.render("help",{
+     res.render("Help",{
          helpMassege:"this a help message",
          title: "help",
 
@@ -38,7 +38,7 @@ app.get("", (req, res)=>{
  })
 
  app.get("/about",(req , res)=>{
-     res.render("about", {title: "about me", name: "jerry"})
+     res.render("about", {title: "About Me", name: "jerry"})
  })
 
  app.get("/weather",(req , res)=>{
@@ -50,7 +50,7 @@ app.get("", (req, res)=>{
          geocode(req.query.address, (error ,  {x1 , x2 , location}={} )=>{
              if (error){
                  res.send({
-                     error : "an error acuured"
+                     error : "an error acurred"
                  }) ;
 
              }else{
@@ -63,7 +63,11 @@ app.get("", (req, res)=>{
                          res.send({
 
                              location: location,
-                             forecast : data2
+                             temperature : data2.current.temperature,
+                             windSpeed: data2.current.wind_speed,
+                             weatherIcon: data2.current.weather_icons[0],
+                             weatherDescriptions:data2.current.weather_descriptions,
+                             currentTime : data2.location.localtime
                          })
                      }
 
