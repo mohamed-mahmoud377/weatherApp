@@ -8,9 +8,9 @@ request({url : url2 , json : true}, (error , data)=>{
     if (error){
         callback("check you internet connection",undefined)
     }else if(data.body.error){
-        callback("we are bot able to get the weather from the given location", undefined)
+        callback("the given location does not appear to be working please try to specify the exact location", undefined)
     }else if(!data){
-        callback("we are bot able to get the weather from the given location",undefined)
+        callback("the given location does not appear to be working please try to specify the exact location",undefined)
 
 
         }else{

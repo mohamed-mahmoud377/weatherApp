@@ -26,6 +26,7 @@ weatherForm.addEventListener('submit',(e)=>{
                     img.style.display= "inline"
                     ms2.textContent = ` the temperature is ${data.temperature}C and it seems to be ${data.weatherDescriptions} with ${data.windSpeed} as the wind speed , and the current time is  ${data.currentTime}`
                 }else{
+                    img.style.display= "none";
                     ms2.style.color = "red";
                     ms2.textContent="the given location does not appear to be working please try to specify the exact location"
                 }
