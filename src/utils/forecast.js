@@ -8,7 +8,7 @@ request({url : url2 , json : true}, (error , data)=>{
     if (error){
         callback("check you internet connection",undefined)
     }else if(data.body.error){
-        callback("something went wrong", undefined)
+        callback("we are bot able to get the weather from the given location", undefined)
     }else if(!data){
         callback("we are bot able to get the weather from the given location",undefined)
 
